@@ -1,64 +1,330 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Website_difa_beranda</title>
-    </head>
-    <body>
-        <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
-                <tr>
-                    <th colspan="2" align="center" bgcolor="FF1257">
-                        <Header><font color = "White">SELAMAT DATANG DI WEBSITE DIFA</font></Header>
-                        <P><em><font color = "White">"it is better to speak, or to die"</font></em></P>
-                    </th>
-                </tr>
-                <tr>
-                    <th bgcolor="FFB3CE" colspan="2">
-                        <a href = "index.html"a > Beranda |</a>
-                        <a href = "Tentang%20saya.html">Tentang saya |</a>
-                        <a href = "Sekolah.html">Sekolah |</a>
-                        <a href = "Syair%20lagu.html">Syair lagu </a>
-                    </th>
-                </tr>   
-                <tr>
-                    <td width ="75%">
-                        <h><b>Sekolah SMKN 1 TANGERANG</b></h>
-                        <hr>
-                        <img src ="smk%201.jpg" width="600" height="200">
-                        <p><b>SMKN 1 Tangerang</b> adalah Sekolah Menengah Kejuruan Negeri terkemuka yang berlokasi di Jl.
-                            Perintis Kemerdekaan II, Babakan, Kecamatan Tangerang, Kota Tangerang, Banten.</p>
-                        <hr>
-                        <p><b>Lokasi dan Kontak</b></p>
-                        <p>Alamat :  Jl. Perintis Kemerdekaan II, Kompleks Pendidikan Cikokol / Babakan, Kota Tangerang, Banten.</p>
-                        <p>Nomor telepon :  (021) 5522534</p>
-                        <hr>
-                        <p><b>Program keahlian </b></p>
-                        <p>- Teknik Ketenagalistrikan</p>
-                        <p>- Teknik Jaringan Komputer dan Telekomunikasi</p>
-                        <p>- Desain Komunikasi Visual</p>
-                        <p>- Pemasaran</p>
-                        <p>- Manajemen Perkatoran dan Layanan Bisnis</p>
-                        <p>- Akutansi dan Keuangan Lembaga</p>
-                        <hr>
-                        <p><b>Visi dan Keunggulan</b></p>
-                        <p>Visi :  Menjadikan lembaga pendidikan terdepan dalam program dan teratas dalam kualitas untuk melahirkan insan yang berakhlak mulia,
-                             berjiwa wirausaha, serta peduli lingkungan.</p>
-                        <p>Prestasi :  Aktif dan sering meraih prestasi dalam ajang Lomba Kompetensi Siswa (LKS) tingkat kota maupun provinsi,
-                            seperti di bidang Web Technologies dan ITNSA (Information Technology National Standard Association).</p>
-                    </td>
-                    <td width="25%" valign="top" height="100%" bgcolor="FFE6EE">
-                        <h><b>Tautan eksternal :</b></h>
-                        <p><a href ="https://www.instagram.com/dsyftopia__/">- Instragam Difa</a></p>
-                        <p><a href ="https://www.instagram.com/smkn1tng/">- Instragam Nesta</a></p>
-                        <p><a href ="https://www.whatsapp.com/channel/0029Vb5kXG18vd1OoQFd963L">- Channel Whatsaap Nesta</a></p>
-                        <p><a href ="https://www.smkn1-tng.sch.id/">- Website Nesta</a></p>
-                    </td>
-                </tr>
-                <tr >
-                    <td colspan="2" bgcolor="FF5C95FF2">
-                        <p>@copyright Difa A. 2026</p>
-                    </td>
-                </tr>
-        </table>
-    </body>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Difa | Sekolah</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            background: #fff2f7;
+            color: #442633;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .website {
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+            background: white;
+            border: 1px solid #f5c6d8;
+            border-radius: 22px;
+            box-shadow: 0 12px 35px rgba(166, 42, 93, 0.12);
+        }
+
+        header {
+            padding: 35px 20px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #ff1257, #e94788);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(22px, 4vw, 30px);
+            line-height: 1.4;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            color: #fff0f6;
+            font-style: italic;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px;
+            background: #ffe0eb;
+            border-bottom: 1px solid #f6c4d7;
+        }
+
+        nav a {
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: #8d1746;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: white;
+            background: #ff1257;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(200px, 0.9fr);
+            gap: 22px;
+            padding: 25px;
+        }
+
+        .main-content {
+            min-width: 0;
+            padding: 22px;
+            border: 1px solid #f5d3e0;
+            border-radius: 18px;
+            background: #fffafd;
+        }
+
+        .main-content h2 {
+            margin: 0 0 15px;
+            color: #b51e58;
+            font-size: 23px;
+        }
+
+        .school-image {
+            display: block;
+            width: 100%;
+            height: 230px;
+            margin: 15px 0 20px;
+            object-fit: cover;
+            border: 4px solid #ffe0eb;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(166, 42, 93, 0.1);
+        }
+
+        .main-content p {
+            margin: 10px 0;
+        }
+
+        .main-content hr {
+            margin: 22px 0;
+            border: none;
+            border-top: 1px solid #f0c6d7;
+        }
+
+        .subheading {
+            display: inline-block;
+            margin: 0 0 8px;
+            color: #9f1c50;
+            font-size: 17px;
+        }
+
+        .program-list {
+            display: grid;
+            gap: 9px;
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .program-list li {
+            padding: 10px 13px;
+            border: 1px solid #f5d3e0;
+            border-radius: 11px;
+            background: #fff0f6;
+            color: #78304c;
+        }
+
+        .sidebar {
+            align-self: start;
+            padding: 18px;
+            border: 1px solid #f4c6d8;
+            border-radius: 16px;
+            background: #fff0f6;
+        }
+
+        .sidebar h2 {
+            margin: 0 0 12px;
+            color: #9f1c50;
+            font-size: 18px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            background: white;
+            color: #78304c;
+            font-size: 14px;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #a20e48;
+            background: #ffd6e5;
+            transform: translateX(3px);
+        }
+
+        footer {
+            padding: 17px;
+            text-align: center;
+            color: white;
+            background: #ff5c95;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 15px 8px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                padding: 15px;
+            }
+
+            .main-content {
+                padding: 17px;
+            }
+
+            .school-image {
+                height: 200px;
+            }
+
+            nav {
+                gap: 4px;
+                padding: 12px 6px;
+            }
+
+            nav a {
+                padding: 7px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="website">
+
+        <header>
+            <h1>SELAMAT DATANG DI WEBSITE DIFA</h1>
+            <p>"it is better to speak, or to die"</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="Tentang%20saya.html">Tentang saya</a>
+            <a class="active" href="Sekolah.html">Sekolah</a>
+            <a href="Syair%20lagu.html">Syair lagu</a>
+        </nav>
+
+        <div class="content">
+
+            <main class="main-content">
+                <h2>Sekolah SMKN 1 Tangerang</h2>
+
+                <img
+                    class="school-image"
+                    src="smk%201.jpg"
+                    alt="Gedung SMKN 1 Tangerang"
+                >
+
+                <p>
+                    <strong>SMKN 1 Tangerang</strong> adalah Sekolah
+                    Menengah Kejuruan Negeri yang berlokasi di Jl.
+                    Perintis Kemerdekaan II, Babakan, Kecamatan
+                    Tangerang, Kota Tangerang, Banten.
+                </p>
+
+                <hr>
+
+                <h3 class="subheading">📍 Lokasi dan Kontak</h3>
+                <p>
+                    <strong>Alamat:</strong> Jl. Perintis Kemerdekaan II,
+                    Kompleks Pendidikan Cikokol / Babakan,
+                    Kota Tangerang, Banten.
+                </p>
+                <p>
+                    <strong>Nomor telepon:</strong> (021) 5522534
+                </p>
+
+                <hr>
+
+                <h3 class="subheading">🎓 Program Keahlian</h3>
+                <ul class="program-list">
+                    <li>⚡ Teknik Ketenagalistrikan</li>
+                    <li>💻 Teknik Jaringan Komputer dan Telekomunikasi</li>
+                    <li>🎨 Desain Komunikasi Visual</li>
+                    <li>🛍️ Pemasaran</li>
+                    <li>📋 Manajemen Perkantoran dan Layanan Bisnis</li>
+                    <li>📊 Akuntansi dan Keuangan Lembaga</li>
+                </ul>
+
+                <hr>
+
+                <h3 class="subheading">🌷 Visi dan Keunggulan</h3>
+                <p>
+                    <strong>Visi:</strong> Menjadikan lembaga pendidikan
+                    terdepan dalam program dan teratas dalam kualitas
+                    untuk melahirkan insan yang berakhlak mulia,
+                    berjiwa wirausaha, serta peduli lingkungan.
+                </p>
+
+                <p>
+                    <strong>Prestasi:</strong> Aktif mengikuti dan meraih
+                    prestasi dalam ajang Lomba Kompetensi Siswa (LKS)
+                    tingkat kota maupun provinsi, seperti bidang
+                    Web Technologies dan ITNSA
+                    (Information Technology National Standard Association).
+                </p>
+            </main>
+
+            <aside class="sidebar">
+                <h2>🔗 Tautan Eksternal</h2>
+
+                <a href="https://www.instagram.com/dsyftopia__/"
+                   target="_blank" rel="noopener noreferrer">
+                    Instagram Difa ↗
+                </a>
+
+                <a href="https://www.instagram.com/smkn1tng/"
+                   target="_blank" rel="noopener noreferrer">
+                    Instagram Nesta ↗
+                </a>
+
+                <a href="https://www.whatsapp.com/channel/0029Vb5kXG18vd1OoQFd963L"
+                   target="_blank" rel="noopener noreferrer">
+                    Channel WhatsApp Nesta ↗
+                </a>
+
+                <a href="https://www.smkn1-tng.sch.id/"
+                   target="_blank" rel="noopener noreferrer">
+                    Website Nesta ↗
+                </a>
+            </aside>
+
+        </div>
+
+        <footer>
+            <p>© Difa A. 2026 | All Rights Reserved ♡</p>
+        </footer>
+
+    </div>
+</body>
 </html>
+```
