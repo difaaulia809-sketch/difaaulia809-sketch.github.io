@@ -1,51 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Website_difa_berita2</title>
-    </head>
-    <body>
-        <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
-                <tr>
-                    <th colspan="2" align="center" bgcolor="FF1257">
-                        <Header><font color = "White">SELAMAT DATANG DI WEBSITE DIFA</font></Header>
-                        <P><em><font color = "White">"it is better to speak, or to die"</font></em></P>
-                    </th>
-                </tr>
-                <tr>
-                    <th bgcolor="FFB3CE" colspan="2">
-                        <a href = "index.html"a > Beranda |</a>
-                        <a href = "Tentang%20saya.html">Tentang saya |</a>
-                        <a href = "Sekolah.html">Sekolah |</a>
-                        <a href = "Syair%20lagu.html">Syair lagu </a>
-                    </th>
-                </tr>   
-                <tr>
-                    <td width ="75%">
-                        <h><b>Berita terkini</b></h>
-                        <hr>
-                        <p><b>Hari Sumpah Pemuda Sudah Semakin Dekat!</b></p>
-                        <p>2 oktober 2026</p>
-                        <p >Sumpah Pemuda, yang diikrarkan pada 28 Oktober 1928, adalah salah 
-                            satu momen paling penting dalam sejarah perjuangan kemerdekaan Indonesia.</p>
-                        <img src="sumpah%20pemuda.webp">
-                        <p>Sumpah Pemuda, yang secara resmi disebut sebagai Keputusan Kongres Pemuda Indonesia (ejaan van Ophuijsen: Poetoesan Congres Pemoeda-Pemoeda Indonesia) adalah ikrar yang diucapkan oleh pemuda-pemudi Indonesia pada 28 Oktober 1928, yang menetapkan jati diri bangsa Indonesia.[1] Sumpah Pemuda adalah salah satu tonggak utama dalam sejarah pergerakan kemerdekaan Indonesia. Ikrar ini merupakan bentuk pergerakan kemerdekaan Republik Indonesia oleh pemuda dan pemudi di Indonesia dengan pernyataan janji satu tanah air,
-                            satu bangsa, dan satu bahasa. 
-                        </p>
-                    </td>
-                    <td width="25%" valign="top" height="100%" bgcolor="FFE6EE">
-                        <h><b>Tautan eksternal :</b></h>
-                        <p><a href ="https://www.instagram.com/dsyftopia__/">- Instragam Difa</a></p>
-                        <p><a href ="https://www.instagram.com/smkn1tng/">- Instragam Nesta</a></p>
-                        <p><a href ="https://www.whatsapp.com/channel/0029Vb5kXG18vd1OoQFd963L">- Channel Whatsaap Nesta</a></p>
-                        <p><a href ="https://www.smkn1-tng.sch.id/">- Website Nesta</a></p>
-                    </td>
-                </tr>
-                <tr >
-                    <td colspan="2" bgcolor="FF5C95FF2">
-                        <p>@copyright Difa A. 2026</p>
-                    </td>
-                </tr>
-        </table>
-    </body>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Website Difa | Berita Sumpah Pemuda</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 36px 16px;
+            background: #fff2f7;
+            color: #442633;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+        }
+        .website {
+            width: min(100%, 900px);
+            margin: 0 auto;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #f5c6d8;
+            border-radius: 22px;
+            box-shadow: 0 14px 40px rgba(166, 42, 93, 0.12);
+        }
+        .hero {
+            padding: 38px 24px 30px;
+            text-align: center;
+            color: #ffffff;
+            background: linear-gradient(135deg, #ff1257, #e94788);
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(1.45rem, 4vw, 2rem);
+            line-height: 1.3;
+            letter-spacing: 1.2px;
+        }
+        .hero p { margin: 12px 0 0; color: #fff0f6; font-style: italic; }
+        .navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 18px;
+            background: #ffe0eb;
+            border-bottom: 1px solid #f6c4d7;
+        }
+        .navigation a {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 999px;
+            color: #8d1746;
+            text-decoration: none;
+            font-size: .94rem;
+            font-weight: 650;
+            transition: background .2s ease, color .2s ease, transform .2s ease;
+        }
+        .navigation a:hover, .navigation a.active {
+            color: #ffffff;
+            background: #ff1257;
+            transform: translateY(-1px);
+        }
+        .content {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(220px, .9fr);
+            gap: 24px;
+            padding: 28px;
+        }
+        .section-title {
+            margin: 0 0 18px;
+            color: #b51e58;
+            font-size: 1.3rem;
+        }
+        .news-card {
+            margin-bottom: 18px;
+            padding: 20px;
+            border: 1px solid #f5d3e0;
+            border-radius: 16px;
+            background: #fffafd;
+            transition: box-shadow .2s ease, transform .2s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(166, 42, 93, .09);
+        }
+        .news-card h3 { margin: 0 0 5px; color: #69233f; font-size: 1.08rem; line-height: 1.45; }
+        .date { margin: 0 0 12px; color: #a36b82; font-size: .85rem; }
+        .news-card p { margin: 0 0 12px; }
+        .news-image {
+            display: block;
+            width: 100%;
+            max-height: 360px;
+            margin: 18px auto;
+            object-fit: cover;
+            border: 4px solid #ffe0eb;
+            border-radius: 14px;
+        }
+        .news-intro {
+            padding: 14px 16px;
+            border-left: 4px solid #ff5c95;
+            border-radius: 0 12px 12px 0;
+            background: #fff0f6;
+            color: #78304c;
+        }
+        .history-highlight {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            margin: 18px 0;
+        }
+        .history-item {
+            padding: 14px 10px;
+            border: 1px solid #f5c6d8;
+            border-radius: 13px;
+            background: #fff0f6;
+            text-align: center;
+        }
+        .history-item strong { display: block; color: #b51e58; font-size: 1.05rem; }
+        .history-item span { color: #78304c; font-size: .82rem; }
+        .news-image { height: auto; }
+        .read-more { color: #e51d60; font-weight: 700; text-decoration: none; }
+        .read-more:hover { text-decoration: underline; }
+        .sidebar {
+            align-self: start;
+            padding: 20px;
+            border: 1px solid #f4c6d8;
+            border-radius: 16px;
+            background: #fff0f6;
+        }
+        .sidebar h2 { margin: 0 0 12px; color: #9f1c50; font-size: 1.05rem; }
+        .sidebar a {
+            display: block;
+            margin-top: 9px;
+            padding: 9px 11px;
+            border-radius: 10px;
+            background: rgba(255,255,255,.8);
+            color: #78304c;
+            font-size: .9rem;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+        .sidebar a:hover { background: #ffd6e5; color: #a20e48; }
+        /* Halaman Tentang Saya */
+        .about-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(220px, .9fr);
+            gap: 24px;
+            padding: 28px;
+        }
+        .about-card {
+            padding: 24px;
+            border: 1px solid #f5d3e0;
+            border-radius: 18px;
+            background: #fffafd;
+        }
+        .about-card h2 {
+            margin: 0 0 16px;
+            color: #b51e58;
+            font-size: 1.4rem;
+        }
+        .profile-photo {
+            display: block;
+            width: 190px;
+            height: 190px;
+            max-width: 100%;
+            margin: 0 auto 20px;
+            object-fit: cover;
+            border: 5px solid #ffe0eb;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(166, 42, 93, .14);
+        }
+        .intro-label {
+            margin: 0 0 12px;
+            color: #9f1c50;
+            font-size: 1.12rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        .about-card p { margin: 0 0 14px; }
+        .film-list {
+            display: grid;
+            gap: 10px;
+            margin: 16px 0 20px;
+            padding: 0;
+            list-style: none;
+        }
+        .film-list li {
+            padding: 11px 14px;
+            border: 1px solid #f5d3e0;
+            border-radius: 12px;
+            background: #fff0f6;
+            color: #78304c;
+            font-weight: 600;
+        }
+        .welcome-note {
+            margin-top: 18px !important;
+            padding: 14px 16px;
+            border-left: 4px solid #ff5c95;
+            border-radius: 0 12px 12px 0;
+            background: #ffeaf2;
+            color: #8d1746;
+            font-weight: 600;
+        }
+        .song-heading {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 18px 0;
+            padding: 18px;
+            border: 1px solid #f5c6d8;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #fff0f6, #ffe0eb);
+        }
+        .music-icon {
+            display: grid;
+            flex: 0 0 54px;
+            width: 54px;
+            height: 54px;
+            place-items: center;
+            border-radius: 15px;
+            background: #ff5c95;
+            color: white;
+            font-size: 30px;
+        }
+        .song-heading h3 { margin: 0; color: #9f1c50; font-size: 1.25rem; }
+        .song-heading .artist { margin: 3px 0 0; color: #a36b82; font-size: .92rem; }
+        .song-note { margin: 16px 0 !important; }
+        .lyrics-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-left: 4px solid #ff5c95;
+            border-radius: 0 14px 14px 0;
+            background: #fff0f6;
+        }
+        .lyrics-box p { margin: 0 0 12px; }
+        .lyrics-box .lyrics-label { color: #9f1c50; font-weight: 700; }
+        .lyrics-box .lyrics-credit { margin-bottom: 0; color: #a36b82; font-size: .88rem; font-style: italic; }
+        footer {
+            padding: 17px 22px;
+            text-align: center;
+            color: #ffffff;
+            background: #ff5c95;
+            font-size: .88rem;
+        }
+        footer p { margin: 0; }
+        @media (max-width: 650px) {
+            body { padding: 16px 10px; }
+            .content, .about-layout { grid-template-columns: 1fr; padding: 18px; gap: 8px; }
+            .hero { padding: 30px 16px 24px; }
+            .navigation { gap: 4px; padding: 12px 8px; }
+            .navigation a { padding: 7px 10px; font-size: .88rem; }
+        }
+    </style>
+</head>
+<body>
+    <main class="website">
+        <header class="hero">
+            <h1>SELAMAT DATANG DI WEBSITE DIFA</h1>
+            <p>“it is better to speak, or to die”</p>
+        </header>
+        <nav class="navigation" aria-label="Navigasi utama">
+            <a class="active" href="index.html">Beranda</a>
+            <a href="Tentang%20saya.html">Tentang saya</a>
+            <a href="Sekolah.html">Sekolah</a>
+            <a href="Syair%20lagu.html">Syair lagu</a>
+        </nav>
+        <div class="content">
+            <section>
+                <h2 class="section-title">Berita Terkini ♡</h2>
+                <article class="news-card">
+                    <p class="date">2 Oktober 2026 · Sejarah Indonesia</p>
+                    <h3>Hari Sumpah Pemuda Sudah Semakin Dekat!</h3>
+                    <p class="news-intro">Setiap tanggal 28 Oktober, bangsa Indonesia memperingati Sumpah Pemuda untuk mengenang tekad para pemuda dalam menyatukan tanah air, bangsa, dan bahasa Indonesia.</p>
+                    <img class="news-image" src="sumpah pemuda.webp" alt="Ilustrasi peringatan Sumpah Pemuda">
+                    <div class="history-highlight">
+                        <div class="history-item"><strong>28 Oktober</strong><span>Tanggal peringatan</span></div>
+                        <div class="history-item"><strong>1928</strong><span>Tahun ikrar</span></div>
+                        <div class="history-item"><strong>Persatuan</strong><span>Semangat utama</span></div>
+                    </div>
+                    <p>Sumpah Pemuda merupakan salah satu tonggak penting dalam sejarah pergerakan nasional Indonesia. Ikrar ini lahir dari Kongres Pemuda II yang berlangsung pada 27–28 Oktober 1928, ketika para pemuda dari berbagai daerah menunjukkan komitmen untuk bersatu.</p>
+                    <p>Isi Sumpah Pemuda menegaskan tiga hal utama, yaitu satu tanah air, satu bangsa, dan menjunjung bahasa persatuan, bahasa Indonesia. Semangat tersebut membantu memperkuat rasa kebangsaan di tengah keberagaman suku, bahasa, dan budaya.</p>
+                    <p>Peringatan Sumpah Pemuda bukan sekadar mengenang peristiwa masa lalu. Momen ini juga mengajak generasi muda untuk menjaga persatuan, menghargai perbedaan, serta berkontribusi positif bagi lingkungan dan bangsa.</p>
+                    <p>Menjelang 28 Oktober, mari jadikan semangat Sumpah Pemuda sebagai pengingat bahwa perbedaan bukan penghalang untuk bekerja sama dan meraih tujuan bersama.</p>
+                </article>
+            </section>
+            <aside class="sidebar">
+                <h2>Tautan eksternal</h2>
+                <a href="https://www.instagram.com/dsyftopia__/" target="_blank" rel="noopener noreferrer">Instagram Difa ↗</a>
+                <a href="https://www.instagram.com/smkn1tng/" target="_blank" rel="noopener noreferrer">Instagram Nesta ↗</a>
+                <a href="https://www.whatsapp.com/channel/0029Vb5kXG18vd1OoQFd963L" target="_blank" rel="noopener noreferrer">Channel WhatsApp Nesta ↗</a>
+                <a href="https://www.smkn1-tng.sch.id/" target="_blank" rel="noopener noreferrer">Website Nesta ↗</a>
+            </aside>
+        </div>
+        <footer><p>© Difa A. 2026</p></footer>
+    </main>
+</body>
 </html>
